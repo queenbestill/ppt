@@ -1,41 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!DOCTYPE html> 
-<html lang="en">  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Piedra, papel y tijera</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Piedra, papel y tijera</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="script.js" defer></script>
+
 </head>
+
 <body>
 
   <div>
     <h1>Piedra, papel y tijera</h1>
   </div>
-    
-      <div>
-        <img src="img/papel.jpg" alt="papel">
-        <img src="img/piedra.jpg" alt="piedra">
-        <img src="img/tijera.jpg" alt="tijera">
-      </div>
-      
-      <div>
-        <h3>Puntuación</h3>
-      </div>
-      
-      <div>
-        <p>0</p> 
-      <p>Jugador</p> 
-      </div>
-       <div>
-        <p>0</p> 
-        <p>Ordenador</p> 
-      </div>
-    
-    
-        </div>
-      </div>
-      
-  
+
+  <div>
+    <img id="papel-img" class="selection" src="img/papel.jpg" alt="papel">
+    <img id="piedra-img" class="selection" src="img/piedra.jpg" alt="piedra">
+    <img id="tijera-img" class="selection" src="img/tijera.jpg" alt="tijera">
+  </div>
+  <div>
+    <button type="button" class="selection" id="papel-button">papel</button>
+    <button type="button" class="selection" id="piedra-button">piedra</button>
+    <button type="button" class="selection" id="tijera-button">tijera</button>
+  </div>
+  <div>
+    <h3>Puntuación</h3>
+  </div>
+  <div id="puntacion">
+    <div>
+      <p>0</p>
+      <p>Jugador</p>
+    </div>
+    <div>
+      <p>0</p>
+      <p>Ordenador</p>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
 </body>
 
 </html>

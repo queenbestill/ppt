@@ -1,0 +1,20 @@
+body{
+    margin:0 auto;
+    box-sizing: border-box;
+}
+ #papel{
+    cursor: pointer;
+ }
+ .selection{
+
+ }
+ #tijera{
+    background-image: url("./img/tijera.jpg");
+    width: 20px;
+    height: 50px;
+    background-size: cover;
+    
+ }
+#puntacion{
+    
+}
