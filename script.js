@@ -4,8 +4,10 @@ const scissors = document.querySelector('#tijera-img')
 
 let selecUsuario 
 let selecOrdenador 
+
 rock.addEventListener('click',function () {
-    selectUser('rock')
+    let result =selectUser('rock')
+    console.log(result)
 })
 
 paper.addEventListener('click',function () {
@@ -16,11 +18,11 @@ scissors.addEventListener('click',function () {
     selectUser('tijeras')
 })
 
-
 function selectUser(player){
 
     let pcselect = generarAleatorioEntre0y2()
     console.log(pcselect)
+    console.log(player)
     if(player === "piedra" && pcselect === "papel"){
         return "Gana ordenador"
     } 
@@ -34,11 +36,8 @@ function selectUser(player){
     }
 }
 
-
-
-
-
-function generarAleatorioEntre0y2() {
+function generarAleatorioEntre0y2
+() {
   let a = Math.floor(Math.random() * 3);
   if (a === 0) {
     return 'piedra';
