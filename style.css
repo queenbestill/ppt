@@ -16,5 +16,6 @@ body{
     
  }
 #puntacion{
-    
+ display: flex;
+ flex-direction: row;
 }
