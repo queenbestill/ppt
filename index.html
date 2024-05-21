@@ -1,48 +1,51 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piedra, papel y tijera</title>
   <link rel="stylesheet" href="./style.css">
   <script src="script.js" defer></script>
-
 </head>
 
 <body>
-
-  <div>
-    <h1>Piedra, papel y tijera</h1>
+  <div >
+    <h1 class="encabezado">Piedra, papel y tijera</h1>
+    <h3 >Tirada <span id="tirada">1</span></h3>
+    <h3 >Tiradas pendientes: <span id="restantes">3</span></h3>
   </div>
-
-  <div>
+  <div class="iconos">
     <img id="papel-img" class="selection" src="img/papel.jpg" alt="papel">
     <img id="piedra-img" class="selection" src="img/piedra.jpg" alt="piedra">
     <img id="tijera-img" class="selection" src="img/tijera.jpg" alt="tijera">
   </div>
-  <div>
-    <button type="button" class="selection" id="papel-button" data-selection>papel</button>
-    <button type="button" class="selection" id="piedra-button" data-selection>piedra</button>
-    <button type="button" class="selection" id="tijera-button" data-selection>tijera</button>
-  </div>
-  <div>
-    <h3>Puntuación</h3>
-  </div>
-  <div id="puntacion">
-    <div>
-      <p>0</p>
+  
+  
+  <div id="puntuacion">
+    <div cl>
+      <h3>Puntos</h3>
+      <p id="jugador-score">0</p>
       <p>Jugador</p>
+      <p id="jugador-choice">-</p>
+      <div id="jugador-choice-img" class="selection-result"></div>
     </div>
+    <div class="divider"></div>
     <div>
-      <p>0</p>
+      <h3 >Puntos</h3>
+      <p id="ordenador-score">0</p>
       <p>Ordenador</p>
+      <p id="ordenador-choice">-</p>
+      <div id="ordenador-choice-img" class="selection-result"></div>
     </div>
   </div>
 
-  </div>
-  </div>
-
+<!--   <div id="game-over-dialog" class="dialog">
+    <div class="dialog-content">
+      <span class="close-button" id="close-button">&times;</span>
+      <p id="game-over-message"></p>
+      <button id="reset-button">Volver a jugar</button>
+    </div>
+  </div> -->
 </body>
 
 </html>
