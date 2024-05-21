@@ -7,10 +7,14 @@ const jugadorChoiceImg = document.getElementById('jugador-choice-img');
 const ordenadorChoiceImg = document.getElementById('ordenador-choice-img');
 const contarTirada = document.getElementById("tirada")
 const tiradasPendientes = document.getElementById("restantes")
+const dialog=document.getElementById('cuadro')
+let resetButton
+console.log(dialog)
 
 let jugadorScore = 0;
 let ordenadorScore = 0;
 let turno = 0;
+dialog.style.display = 'none'
 
 rock.addEventListener('click', function () {
   jugar('piedra');
@@ -22,23 +26,13 @@ scissors.addEventListener('click', function () {
   jugar('tijera');
 });
 
-// cada clic suma a contartirada y resta a tiradas pendientes
-function detenerJugar () {
- if (turno===3) {
-  selecUsuario==
-
-  // da el mensaje de ganó o perdió
-
-  // no se puede seguir jugando
-
- }
-}
-
 function jugar(selecUsuario) {
+  if (turno === 3) {
+    return }
   // actualizar la jugada para que sea segunda 
   turno++;
   contarTirada.innerText = turno;
-  tiradasPendientes.innerText = 3-turno;
+  tiradasPendientes.innerText = turno;
 
 
   let selecOrdenador = generarAleatorioEntre0y2();
@@ -60,7 +54,8 @@ function jugar(selecUsuario) {
   console.log(`Jugador: ${selecUsuario} - Ordenador: ${selecOrdenador}`);
   console.log(resultado);
 
-  if (jugadorScore === 3 || ordenadorScore === 3) {
+  if (turno === 3) {
+    dialog.style.display = 'block';
     mostrarDialogo(resultado);
   }
 }
@@ -73,6 +68,7 @@ function determinarGanador(player, pcselect) {
     (player === "papel" && pcselect === "piedra") ||
     (player === "tijera" && pcselect === "papel")
   ) {
+
     return "Gana jugador";
   } else {
     return "Gana ordenador";
@@ -99,41 +95,48 @@ function mostrarImagenSeleccion(element, seleccion) {
   element.style.display = 'block';
   let imagen = document.createElement('img');
   if (seleccion === 'piedra') {
-    imagen.src = 'img/piedra.jpg';
+    imagen.src = 'img/piedradigi.png';
+    imagen.style.height = '15vh';
   } else if (seleccion === 'papel') {
-    imagen.src = 'img/papel.jpg';
+    imagen.src = 'img/papeldigi.png';
+    imagen.style.height = '15vh';
   } else if (seleccion === 'tijera') {
-    imagen.src = 'img/tijera.jpg';
+    imagen.src = 'img/tijeradigi.png';
+    imagen.style.height = '15vh';
   }
   element.innerHTML = '';
   element.appendChild(imagen);
 }
 
 function mostrarDialogo(resultado) {
-  const dialog = document.getElementById('game-over-dialog');
-  const message = document.getElementById('game-over-message');
-  if (jugadorScore === 3) {
+  resetButton = document.createElement('button')
+
+  resetButton.setAttribute('id','reset-button')
+  resetButton.innerText= 'Reiniciar'
+  dialog.appendChild(resetButton)
+  
+  const message = document.getElementById('game-over-dialog');
+  if (jugadorScore > ordenadorScore) {
     message.innerText = "¡Ganaste!";
+    message.style.color = "green";
   } else {
     message.innerText = "¡Perdiste!";
-  }
-  dialog.style.display = 'block';
-
-  const closeButton = document.getElementById('close-button');
-  const resetButton = document.getElementById('reset-button');
-
-  closeButton.onclick = function () {
-    dialog.style.display = 'none';
+    message.style.color="red";
   }
 
+  
   resetButton.onclick = function () {
+
     jugadorScore = 0;
     ordenadorScore = 0;
+    turno = 0;
     actualizarPuntuacion();
     dialog.style.display = 'none';
+    dialog.removeChild(resetButton)
     jugadorChoice.innerText = '-';
     ordenadorChoice.innerText = '-';
     jugadorChoiceImg.style.display = 'none';
     ordenadorChoiceImg.style.display = 'none';
   }
 }
+

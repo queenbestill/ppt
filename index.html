@@ -9,43 +9,46 @@
 </head>
 
 <body>
+
   <div >
     <h1 class="encabezado">Piedra, papel y tijera</h1>
     <h3 >Tirada <span id="tirada">1</span></h3>
     <h3 >Tiradas pendientes: <span id="restantes">3</span></h3>
   </div>
   <div class="iconos">
-    <img id="papel-img" class="selection" src="img/papel.jpg" alt="papel">
-    <img id="piedra-img" class="selection" src="img/piedra.jpg" alt="piedra">
-    <img id="tijera-img" class="selection" src="img/tijera.jpg" alt="tijera">
+    <img id="papel-img" class="selection" src="img/papeldigi.png" alt="papel">
+    <img id="piedra-img" class="selection" src="img/piedradigi.png" alt="piedra">
+    <img id="tijera-img" class="selection" src="img/tijeradigi.png" alt="tijera">
   </div>
   
-  
   <div id="puntuacion">
-    <div cl>
-      <h3>Puntos</h3>
-      <p id="jugador-score">0</p>
-      <p>Jugador</p>
+    <div>
+      <h3>Jugador</h3>
       <p id="jugador-choice">-</p>
+      <p>Puntos</p>
+      <p id="jugador-score">0</p>
       <div id="jugador-choice-img" class="selection-result"></div>
     </div>
     <div class="divider"></div>
     <div>
-      <h3 >Puntos</h3>
-      <p id="ordenador-score">0</p>
-      <p>Ordenador</p>
+      <h3>Ordenador</h3>
       <p id="ordenador-choice">-</p>
+      <p>Puntos</p>
+      <p id="ordenador-score">0</p>
       <div id="ordenador-choice-img" class="selection-result"></div>
     </div>
   </div>
-
-<!--   <div id="game-over-dialog" class="dialog">
-    <div class="dialog-content">
-      <span class="close-button" id="close-button">&times;</span>
-      <p id="game-over-message"></p>
-      <button id="reset-button">Volver a jugar</button>
+  
+    <div id="cuadro">
+      <div id="game-over-dialog" class="dialog">
+        
+      </div>
+      </div>
     </div>
-  </div> -->
+  
+    <div hidden>
+      <h1>Bienvenido a nuestro juego</h1>
+    </div>
 </body>
 
 </html>

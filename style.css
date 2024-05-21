@@ -2,8 +2,9 @@ body{
     margin:0 auto;
     box-sizing: border-box;
     text-align: center;
-    
-
+    background-color: #fee2d7;
+    color: #36738e;
+    position: relative;
 }
  #papel{
     cursor: pointer;
@@ -18,10 +19,7 @@ body{
  
  #tijera{
     background-image: url("./img/tijera.jpg");
-    width: 20px;
-    height: 50px;
     background-size: cover;
-    
  }
 
 .encabezado{
@@ -34,4 +32,45 @@ body{
 }
 .divider{
  border: 1px dotted black;
+}
+
+/* 
+#36738e
+#efefef
+#ebb7a7
+#ffc7c5
+#fee2d7
+*/
+
+#game-over-dialog {
+   font-size: 40px;
+}
+
+.iconos {
+   height: 15vh;
+}
+
+#cuadro {
+   border: 1px solid #36738e;
+   height: 50vh;
+   width: 60vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: absolute;
+   z-index: 2;
+   left:20vw;
+   top: 15vh;
+   background-color: #ffc7c5;
+   border-radius: 12px;
+}
+
+#reset-button {
+   height: 50px;
+   padding: 12px;
+}
+
+#reset-button:hover {
+   background-color: #36738e;
 }
