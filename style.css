@@ -4,7 +4,6 @@ body{
     text-align: center;
     background-color: #292f4b;
     color: #f391a2;
-    position: relative;
     font-family: 'Carter One', cursive;
 }
 
@@ -94,9 +93,7 @@ body{
    font-size: 18px;
 }
 
-#papel-img,
-#piedra-img,
-#tijera-img {
+.iconosdeportada {
    animation: bounce 2s ease infinite;
 }
 
@@ -107,11 +104,7 @@ body{
    }
 
    @keyframes #papel-img, #piedra-img, #tijera-img {
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
+      0%, 20%, 50%, 80%, 100% {
          transform: translateY(0);
       }
       40% {
@@ -124,11 +117,7 @@ body{
 
    }
 
-   0%,
-   20%,
-   50%,
-   80%,
-   100% {
+   0%, 20%, 50%, 80%, 100% {
       transform: translateY(0);
    }
 
@@ -139,4 +128,23 @@ body{
    60% {
       transform: translateY(-15px);
    }
+}
+
+#inicial {
+   border: 1px solid #36738e;
+   background-color: #c04368;
+   padding: 20px;
+}
+
+#start {
+   padding: 1vw;
+   margin-top: 3vh;
+   font-family: 'Carter One', cursive;
+   color: #36738e;
+   border-color: #f391a2;
+   font-size: 22px;
+}
+
+#start:hover {
+   background-color: #b7c2d9;
 }

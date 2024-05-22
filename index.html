@@ -11,44 +11,49 @@
 
 <body>
   <div id="todo">
-    <div>
-      <h1 class="encabezado">Piedra, papel y tijera</h1>
-      <h3 class="tiradacolor">Tirada <span id="tirada">1</span></h3>
-      <h3 class="tiradacolor">Tiradas pendientes: <span id="restantes">3</span></h3>
-    </div>
-    <div class="iconos">
-      <img id="papel-img" class="selection" src="img/papeldigi.png" alt="papel">
-      <img id="piedra-img" class="selection" src="img/piedradigi.png" alt="piedra">
-      <img id="tijera-img" class="selection" src="img/tijeradigi.png" alt="tijera">
-    </div>
-
-    <div id="puntuacion">
-      <div id="jugadorcolores">
-        <h3>Jugador</h3>
-        <p id="jugador-choice">-</p>
-        <p>Puntos</p>
-        <p id="jugador-score">0</p>
-        <div id="jugador-choice-img" class="selection-result"></div>
-      </div>
-      <div class="divider"></div>
-      <div id="ordenadorcolores">
-        <h3>Ordenador</h3>
-        <p id="ordenador-choice">-</p>
-        <p>Puntos</p>
-        <p id="ordenador-score">0</p>
-        <div id="ordenador-choice-img" class="selection-result"></div>
-      </div>
-    </div>
-
-    <div id="cuadro">
-      <div id="game-over-dialog" class="dialog"></div>
-      
-    </div>
-  
     <div id="inicial">
-      
+      <div>
+        <img class="iconosdeportada" src="img/papeldigi.png" alt="papel">
+        <img class="iconosdeportada" src="img/piedradigi.png" alt="piedra">
+        <img class="iconosdeportada" src="img/tijeradigi.png" alt="tijera">
+      </div>
+      <button id="start">Inicio del Juego</button>
     </div>
+    <div id="juego">
+      <div>
+        <h1 class="encabezado">Piedra, papel y tijera</h1>
+        <h3 class="tiradacolor">Tirada <span id="tirada">1</span></h3>
+        <h3 class="tiradacolor">Tiradas pendientes: <span id="restantes">3</span></h3>
+      </div>
+      <div class="iconos">
+        <img id="papel-img" class="selection" src="img/papeldigi.png" alt="papel">
+        <img id="piedra-img" class="selection" src="img/piedradigi.png" alt="piedra">
+        <img id="tijera-img" class="selection" src="img/tijeradigi.png" alt="tijera">
+      </div>
+
+      <div id="puntuacion">
+        <div id="jugadorcolores">
+          <h3>Jugador</h3>
+          <p id="jugador-choice">-</p>
+          <p>Puntos</p>
+          <p id="jugador-score">0</p>
+          <div id="jugador-choice-img" class="selection-result"></div>
+        </div>
+        <div class="divider"></div>
+        <div id="ordenadorcolores">
+          <h3>Ordenador</h3>
+          <p id="ordenador-choice">-</p>
+          <p>Puntos</p>
+          <p id="ordenador-score">0</p>
+          <div id="ordenador-choice-img" class="selection-result"></div>
+        </div>
+      </div>
+
+      <div id="cuadro">
+        <div id="game-over-dialog" class="dialog"></div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>

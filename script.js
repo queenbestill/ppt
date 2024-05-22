@@ -141,18 +141,20 @@ function mostrarDialogo(resultado) {
   }
 }
 
-const inicio =document.getElementById("inicial")
-const newInicio = document.createElement("div")
-newInicio.setAttribute("id","bienvenida")
-newInicio.innerHTML = "<h1>Bienvenidos a Piedra, papel y tijeras</h1>"
-inicio.appendChild(newInicio)
+const inicio = document.getElementById("inicial");
+const newInicio = document.createElement("div");
+newInicio.setAttribute("id", "bienvenida");
+newInicio.innerHTML = "<h1>Bienvenidos a Piedra, papel y tijeras</h1>";
+inicio.appendChild(newInicio);
 
-const newButton = document.createElement("button")
-newButton.setAttribute("id", "start")
-newButton.innerHTML="<h2>Inicio del Juego</h2>"
-inicio.appendChild(newButton)
+const botonInicio = document.getElementById("start");
+botonInicio.addEventListener("click", function() {
+  console.log(inicio);
+  inicio.style.display = "none";
+  document.getElementById("juego").style.display = "block"; // Mostrar el juego
+});
 
-
-botonInicio.addEventListener("click", function(){
-return inicial.style.display="none"
-})
+// Ocultar el juego al cargar la página
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("juego").style.display = "none";
+});
