@@ -8,6 +8,10 @@ body{
     font-family: 'Carter One', cursive;
 }
 
+#todo {
+   padding: 6% 0;
+}
+
  #papel{
     cursor: pointer;
  }
@@ -96,18 +100,13 @@ body{
    animation: bounce 2s ease infinite;
 }
 
-@keyframes bounce {#papel-img,
-   #piedra-img,
-   #tijera-img {
+@keyframes bounce {#papel-img, #piedra-img, #tijera-img {
       animation: #papel-img,
          #piedra-img,
          #tijera-img 2s ease infinite;
    }
 
-   @keyframes #papel-img,
-   #piedra-img,
-   #tijera-img {
-
+   @keyframes #papel-img, #piedra-img, #tijera-img {
       0%,
       20%,
       50%,
@@ -115,7 +114,6 @@ body{
       100% {
          transform: translateY(0);
       }
-
       40% {
          transform: translateY(-30px);
       }
