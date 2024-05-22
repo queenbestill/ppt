@@ -14,6 +14,7 @@ console.log(dialog)
 let jugadorScore = 0;
 let ordenadorScore = 0;
 let turno = 0;
+let inicial = document.getElementById("#inicial")
 dialog.style.display = 'none'
 
 rock.addEventListener('click', function () {
@@ -32,7 +33,7 @@ function jugar(selecUsuario) {
   // actualizar la jugada para que sea segunda 
   turno++;
   contarTirada.innerText = turno;
-  tiradasPendientes.innerText =3 - turno;
+  tiradasPendientes.innerText = 3 - turno;
 
 
   let selecOrdenador = generarAleatorioEntre0y2();
@@ -140,3 +141,18 @@ function mostrarDialogo(resultado) {
   }
 }
 
+const inicio =document.getElementById("inicial")
+const newInicio = document.createElement("div")
+newInicio.setAttribute("id","bienvenida")
+newInicio.innerHTML = "<h1>Bienvenidos a Piedra, papel y tijeras</h1>"
+inicio.appendChild(newInicio)
+
+const newButton = document.createElement("button")
+newButton.setAttribute("id", "start")
+newButton.innerHTML="<h2>Inicio del Juego</h2>"
+inicio.appendChild(newButton)
+
+
+botonInicio.addEventListener("click", function(){
+return inicial.style.display="none"
+})
