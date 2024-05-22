@@ -33,7 +33,7 @@ function jugar(selecUsuario) {
   // actualizar la jugada para que sea segunda 
   turno++;
   contarTirada.innerText = turno;
-  tiradasPendientes.innerText = 3- turno;
+  tiradasPendientes.innerText = 3 - turno;
 
 
   let selecOrdenador = generarAleatorioEntre0y2();
