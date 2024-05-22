@@ -6,14 +6,15 @@
   <title>Piedra, papel y tijera</title>
   <link rel="stylesheet" href="./style.css">
   <script src="script.js" defer></script>
+ 
 </head>
 
 <body>
 
   <div >
     <h1 class="encabezado">Piedra, papel y tijera</h1>
-    <h3 >Tirada <span id="tirada">1</span></h3>
-    <h3 >Tiradas pendientes: <span id="restantes">3</span></h3>
+    <h3 class="tiradacolor">Tirada <span id="tirada">1</span></h3>
+    <h3 class="tiradacolor">Tiradas pendientes: <span id="restantes">3</span></h3>
   </div>
   <div class="iconos">
     <img id="papel-img" class="selection" src="img/papeldigi.png" alt="papel">
@@ -22,7 +23,7 @@
   </div>
   
   <div id="puntuacion">
-    <div>
+    <div id="jugadorcolores">
       <h3>Jugador</h3>
       <p id="jugador-choice">-</p>
       <p>Puntos</p>
@@ -30,7 +31,7 @@
       <div id="jugador-choice-img" class="selection-result"></div>
     </div>
     <div class="divider"></div>
-    <div>
+    <div id="ordenadorcolores">
       <h3>Ordenador</h3>
       <p id="ordenador-choice">-</p>
       <p>Puntos</p>

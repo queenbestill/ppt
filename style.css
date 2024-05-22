@@ -2,10 +2,12 @@ body{
     margin:0 auto;
     box-sizing: border-box;
     text-align: center;
-    background-color: #fee2d7;
-    color: #36738e;
+    background-color: #292f4b;
+    color: #f391a2;
     position: relative;
+
 }
+
  #papel{
     cursor: pointer;
  }
@@ -73,4 +75,17 @@ body{
 
 #reset-button:hover {
    background-color: #36738e;
+}
+
+#jugadorcolores {
+   color: #c04368;
+}
+
+#ordenadorcolores {
+  color: #b7c2d9;
+}
+
+.tiradacolor {
+   color:#aeacac ;
+   font-size: 16px;
 }
