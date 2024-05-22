@@ -5,7 +5,7 @@ body{
     background-color: #292f4b;
     color: #f391a2;
     position: relative;
-
+    font-family: 'Carter One', cursive;
 }
 
  #papel{
@@ -27,6 +27,7 @@ body{
 .encabezado{
    display: flex;
    justify-content: center;
+   font-size: 40px;
 }
 .iconos{
    display: flex;
@@ -36,16 +37,9 @@ body{
  border: 1px dotted black;
 }
 
-/* 
-#36738e
-#efefef
-#ebb7a7
-#ffc7c5
-#fee2d7
-*/
-
 #game-over-dialog {
    font-size: 40px;
+   margin-top: 10vh;
 }
 
 .iconos {
@@ -54,38 +48,97 @@ body{
 
 #cuadro {
    border: 1px solid #36738e;
-   height: 50vh;
-   width: 60vw;
+   height: 35vh;
+   width: 35vw;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    position: absolute;
    z-index: 2;
-   left:20vw;
+   left:33vw;
    top: 15vh;
    background-color: #ffc7c5;
    border-radius: 12px;
 }
 
 #reset-button {
-   height: 50px;
-   padding: 12px;
+   padding: 1vw;
+   margin-top:3vh;
+   font-family: 'Carter One', cursive;
+   color: #36738e;
+   border-color: #f391a2;
+   font-size: 22px;
 }
 
 #reset-button:hover {
-   background-color: #36738e;
+   background-color: #b7c2d9;
 }
 
 #jugadorcolores {
    color: #c04368;
+   font-size: 24px;
 }
 
 #ordenadorcolores {
   color: #b7c2d9;
+  font-size: 24px;
 }
 
 .tiradacolor {
    color:#aeacac ;
-   font-size: 16px;
+   font-size: 18px;
+}
+
+#papel-img,
+#piedra-img,
+#tijera-img {
+   animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {#papel-img,
+   #piedra-img,
+   #tijera-img {
+      animation: #papel-img,
+         #piedra-img,
+         #tijera-img 2s ease infinite;
+   }
+
+   @keyframes #papel-img,
+   #piedra-img,
+   #tijera-img {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+         transform: translateY(0);
+      }
+
+      40% {
+         transform: translateY(-30px);
+      }
+
+      60% {
+         transform: translateY(-15px);
+      }
+
+   }
+
+   0%,
+   20%,
+   50%,
+   80%,
+   100% {
+      transform: translateY(0);
+   }
+
+   40% {
+      transform: translateY(-30px);
+   }
+
+   60% {
+      transform: translateY(-15px);
+   }
 }
