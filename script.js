@@ -9,7 +9,6 @@ const contarTirada = document.getElementById("tirada");
 const tiradasPendientes = document.getElementById("restantes");
 const dialog = document.getElementById("cuadro");
 let resetButton;
-console.log(dialog);
 
 let jugadorScore = 0;
 let ordenadorScore = 0;
@@ -31,7 +30,6 @@ function jugar(selecUsuario) {
   if (turno === 3) {
     return;
   }
-  // actualizar la jugada para que sea segunda
   turno++;
   contarTirada.innerText = turno;
   tiradasPendientes.innerText = 3 - turno;
@@ -52,8 +50,6 @@ function jugar(selecUsuario) {
   }
 
   actualizarPuntuacion();
-  console.log(`Jugador: ${selecUsuario} - Ordenador: ${selecOrdenador}`);
-  console.log(resultado);
 
   if (turno === 3) {
     dialog.style.display = "block";
@@ -110,7 +106,6 @@ function mostrarImagenSeleccion(element, seleccion) {
 
 function mostrarDialogo(resultado) {
   resetButton = document.createElement("button");
-
   resetButton.setAttribute("id", "reset-button");
   resetButton.innerText = "Reiniciar";
   dialog.appendChild(resetButton);
@@ -146,7 +141,6 @@ inicio.appendChild(newInicio);
 
 const botonInicio = document.getElementById("start");
 botonInicio.addEventListener("click", function () {
-  console.log(inicio);
   inicio.style.display = "none";
   document.getElementById("juego").style.display = "block"; // Mostrar el juego
 });
